@@ -45,7 +45,7 @@ def can_get_size_of_the_database
 end
 
 def can_find_the_first_item_from_the_database_using_id
-  Movie.find_by(id = 1).title
+  Movie.find_by(id: 1).title
 end
 
 def can_find_by_multiple_attributes
@@ -53,7 +53,7 @@ def can_find_by_multiple_attributes
   # release_date == 2000
   # director == "Me"
   binding.pry
-  Movie.find_by(:title = "Title", release_date = 2000, director = "Me" )
+  Movie.find_by(title: "Title", release_date: 2000, director: "Me" )
 end
 
 def can_find_using_where_clause_and_be_sorted
