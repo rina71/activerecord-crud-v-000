@@ -26,10 +26,9 @@ end
 
 def can_be_created_in_a_block(args = {:title => "whatever", :release_date => 1990})
   Movie.create do |m|
-    binding.pry
-    # m.title = args[:title]
-    # m.release_date = args[:release_date]
-    m.can_be_created_with_a_hash_of_attributes
+    m.title = args[:title]
+    m.release_date = args[:release_date]
+    m.save
   end
 end
 
